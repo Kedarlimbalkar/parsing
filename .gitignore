@@ -14,11 +14,10 @@
 *secret*.json
 client_secrets*.json
 
-# Local Databases
+# Local Databases & SQLite
 *.db
 *.sqlite
 *.sqlite3
-
 
 # Python Bytecode & Cache
 __pycache__/
@@ -42,17 +41,27 @@ ENV/
 Thumbs.db
 .vscode/
 .idea/
+*tempCodeRunnerFile*
 
-# Documentation & Internal Specs (Preserved locally)
-docs/
-
-# Local Sample Data & PDFs (Stored in GCS)
+# Local Outputs & Data Folders (STRICTLY EXCLUDED FROM GIT)
+output/
+o_p/
 data/
-failed_sync_documents.json
-
-# Runtime State & Logs
-ingestion_state.json
+PCEV2/
+rag_verification/reports/
+reports/generated/
+tests/fixtures/
+*.pdf
 *.log
+ingestion_state.json
+failed_sync_documents.json
+local_vector_store.json
 
+# Local Retrieval & Testing Work (EXCLUDED FROM PRODUCTION GIT)
+retrieval/
+retrieval_testing/
+testing_work/
+scratch/
 
-
+# Verification run reports
+rag_verification/reports/
